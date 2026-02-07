@@ -1,5 +1,6 @@
 FROM rocker/rstudio:4.4.2
 USER root 
+WORKDIR /home/rstudio/project
 RUN R -e "install.packages('renv')"
 
 COPY renv.lock renv.lock
